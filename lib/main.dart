@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'BMI',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
@@ -46,6 +47,8 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
+        centerTitle: true,
+        // elevation: 2.0,
         backgroundColor: Colors.black,
         title: Text(
           widget.title,
@@ -87,13 +90,14 @@ class _MyHomePageState extends State<MyHomePage> {
                     label: Text("Enter Your Weight in Kgs",
                         style: TextStyle(
                           color: Colors.red.shade900,
+                          fontWeight: FontWeight.bold,
                         )),
                     suffixIcon: const Icon(CupertinoIcons.smallcircle_circle),
                   ),
                   keyboardType: TextInputType.number,
                 ),
                 const SizedBox(
-                  height: 31,
+                  height: 71,
                 ),
                 TextField(
                   controller: ftController,
@@ -102,13 +106,14 @@ class _MyHomePageState extends State<MyHomePage> {
                     label: Text("Enter Your Height in Ft.",
                         style: TextStyle(
                           color: Colors.red.shade900,
+                          fontWeight: FontWeight.bold,
                         )),
                     suffixIcon: const Icon(CupertinoIcons.heart_circle),
                   ),
                   keyboardType: TextInputType.number,
                 ),
                 const SizedBox(
-                  height: 31,
+                  height: 71,
                 ),
                 TextField(
                   controller: inController,
@@ -117,13 +122,14 @@ class _MyHomePageState extends State<MyHomePage> {
                     label: Text("Enter Your Height in Inch.",
                         style: TextStyle(
                           color: Colors.red.shade900,
+                          fontWeight: FontWeight.bold,
                         )),
                     suffixIcon: const Icon(CupertinoIcons.dot_square),
                   ),
                   keyboardType: TextInputType.number,
                 ),
                 const SizedBox(
-                  height: 250,
+                  height: 200,
                 ),
                 ElevatedButton(
                   onPressed: () {
